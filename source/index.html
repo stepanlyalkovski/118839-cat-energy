@@ -7,14 +7,14 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header__logo">
-        <img class="header__logo-image" src="http://placehold.it/150x100" alt="Cat Energy"
+      <a href="#" class="header__logo logo">
+        <img class="logo__image" src="http://placehold.it/150x100" alt="Cat Energy"
           width="150" height="100">
       </a>
-      <h1 class="header__title main-title">
+      <h1 class="header__title site-name">
         <b>Cat</b> energy
       </h1>
-      <nav class="main-nav">
+      <nav class="header__nav main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -36,16 +36,16 @@
         <h2 class="jumbotron__header">Функциональное питание для котов</h2>
         <b class="jumbotron__slogan">Занялся собой? Займись котом!</b>
       </section>
+      <a class="button button--default" href="./form.html">Подобрать программу</a>
       <section class="program-catalog">
-        <button class="button button--default">Подобрать программу</button>
-        <h3 class="visually-hidden">Каталог программ</h3>
+        <h2 class="visually-hidden">Каталог программ</h2>
         <section class="program-card program-catalog__item">
           <header class="program-card__header">
             <img class="program-card__image" src="http://placehold.it/150x100" alt="Похудение"
             width="150" height="100">
-            <h4 class="program-card__title">
+            <h3 class="program-card__title">
               Похудение
-            </h4>
+            </h3>
           </header>
           <p class="program-card__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
@@ -57,13 +57,13 @@
             </a>
           </div>
         </section>
-        <section class="program-card program-catalog__item">
+        <section class="program-catalog__item program-card">
             <header class="program-card__header">
               <img class="program-card__image" src="http://placehold.it/150x100" alt="Похудение"
               width="150" height="100">
-              <h4 class="program-card__title">
+              <h3 class="program-card__title">
                 Набор массы
-              </h4>
+              </h3>
             </header>
             <p class="program-card__description">
                 Заработать авторитет среди дворовых котов и даже собак?
@@ -77,7 +77,7 @@
           </section>
       </section>
       <section class="instructions">
-        <h2 class="instructions__title">Как это работает</h2>
+        <h2 class="instructions__title title">Как это работает</h2>
         <ul class="instructions__list">
           <li class="instructions__item instructions__item--leaf">
               Функциональное питание содержит только полезные питательные вещества.
@@ -94,7 +94,7 @@
         </ul>
       </section>
       <section class="result-example">
-        <h2 class="result-example__title">Живой пример</h2>
+        <h2 class="result-example__title title">Живой пример</h2>
         <p class="result-example__description">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок!
@@ -113,11 +113,13 @@
         </div>
         <img class="result-example__before-image" src="http://placehold.it/150x100" alt="Живой пример"
         width="150" height="100">
-        <div class="result-example__toggle">
-          <label for="result-example-before">Было</label>
-          <input id="result-example-before" type="radio" name="result-example" checked>
-          <label for="result-example-after">Стало</label>
-          <input id="result-example-after" type="radio" name="result-example">
+        <div class="result-example__toggle-control control">
+          <label class="control__label" for="result-example-before">Было</label>
+          <div class="control__toggle">
+            <input class="control__toggle-option" id="result-example-before" type="radio" name="result-example" value="first" checked>
+            <input class="control__toggle-option" id="result-example-after" type="radio" name="result-example" value="second">
+          </div>
+          <label class="control__label" for="result-example-after">Стало</label>
         </div>
       </section>
     </main>
@@ -128,8 +130,8 @@
         </span>
         <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
       </address>
-      <div class="contacts__map"></div>
-      <h1 class="contacts__title main-title">
+      <div class="footer__map"></div>
+      <h1 class="footer__site-name site-name">
         <b>Cat</b> energy
       </h1>
       <section class="footer__social social">
@@ -147,8 +149,8 @@
       </section>
       <section class="footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <b class="copyright__link-text">HTML Academy</b>
-          <img class="copyright__link-image" src="http://placehold.it/150x100" alt="Html Academy"
+          <b class="copyright__text">HTML Academy</b>
+          <img class="copyright__image" src="http://placehold.it/150x100" alt="Html Academy"
             width="150" height="100">
         </a>
       </section>
