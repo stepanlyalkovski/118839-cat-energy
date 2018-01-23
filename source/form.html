@@ -9,21 +9,20 @@
 <body>
   <header class="header">
     <a href="#" class="header__logo logo">
-      <img class="logo__image" src="http://placehold.it/150x100" alt="Cat Energy"
-        width="150" height="100">
+      <img class="logo__image" src="http://placehold.it/150x100" alt="Cat Energy" width="150" height="100">
     </a>
-    <h1 class="header__title site-name">
-      <b>Cat</b> energy
-    </h1>
+    <a href="index.html" class="header__title logo-header">
+      <img class="logo-header__image" src="http://placehold.it/150x100" alt="Cat Energy" width="150" height="100">
+    </a>
     <nav class="header__nav main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--active" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Каталог продукции</a>
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Подбор программы</a>
@@ -34,10 +33,7 @@
   </header>
   <main class="main">
     <h2 class="title">Подбор программы</h2>
-    <p class="main__text">
-        Заполните анкету и мы подберем
-        программу питания для вашего кота
-    </p>
+    <p class="main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="form__group">
         <legend class="visually-hidden">Основная информация</legend>
@@ -46,11 +42,11 @@
           <input class="control__input" id="name" type="text" name="name">
         </div>
         <div class="form__control control">
-            <label class="control__label form__label--required" for="weight">Вес (КГ):</label>
+            <label class="control__label form__label--required" for="weight">Вес (кг):</label>
             <input class="control__input" id="weight" type="number" name="weight">
         </div>
         <div class="form__control control">
-            <label class="control__label" for="age">Возраст(ЛЕТ):</label>
+            <label class="control__label" for="age">Возраст(лет):</label>
             <input class="control__input" id="age" type="number" name="age">
         </div>
       </fieldset>
@@ -113,17 +109,17 @@
     </form>
   </main>
   <footer class="footer">
-    <address class="footer__contacts contacts">
-      <span class="contacts__text">
-          Приглашаем к сотрудничеству дилеров!
-      </span>
-      <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
-    </address>
-    <div class="footer__map"></div>
-    <h1 class="footer__site-name site-name">
-      <b>Cat</b> energy
-    </h1>
-    <section class="footer__social social">
+    <div class="footer__contacts contacts">
+      <b class="contacts__text">Приглашаем к сотрудничеству дилеров!</b>
+      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
+    <div class="footer__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sby!4v1516719989895" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <a href="#" class="footer__logo logo-header">
+      <img class="logo-header__image" src="http://placehold.it/150x100" alt="Cat Energy" width="150" height="100">
+    </a>
+    <div class="footer__social social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
@@ -135,14 +131,13 @@
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>
       </ul>
-    </section>
-    <section class="footer__copyright copyright">
+    </div>
+    <div class="footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">HTML Academy</b>
-        <img class="copyright__image" src="http://placehold.it/150x100" alt="Html Academy"
-          width="150" height="100">
+        <img class="copyright__image" src="http://placehold.it/150x100" alt="Html Academy" width="150" height="100">
       </a>
-    </section>
+    </div>
   </footer>
 </body>
 </html>
