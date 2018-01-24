@@ -1,0 +1,44 @@
+@import "../_variables";
+
+//TODO One button is 14px font size, Add a modifier
+.button {
+  padding: 13px 0;
+  border: 0;
+  font-size: $font-size-md;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--primary {
+    color: $color-white;
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+
+    &:active {
+      color: $color-primary-pale;
+    }
+  }
+
+  &--secondary {
+    color: $color-black;
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: $color-secondary-dark;
+    }
+
+    &:active {
+      color: $color-secondary-pale;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .button {
+    display: block;
+    width: 100%;
+  }
+}
