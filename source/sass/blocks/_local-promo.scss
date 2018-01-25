@@ -1,0 +1,7 @@
+.local-promo {
+  background: url('../img/gift-photo-mobile@1x.jpg') no-repeat;
+}
+
+.local-promo__text {
+  @include default-text(16px, 20px, $color-white);
+}

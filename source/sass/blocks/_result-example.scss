@@ -1,0 +1,23 @@
+.result-example__description {
+  @include default-text(14px, 18px);
+}
+
+.result-example__statistic-item {
+  @include default-text(12px);
+}
+
+.result-example__statistic-data {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: $font-family-oswald;
+  text-transform: uppercase;
+  color: $color-codgray;
+}
+
+.result-example__money-spent {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

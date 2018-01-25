@@ -1,1 +1,29 @@
-@import "blocks/_button";
+@import '_typography';
+@import '_variables';
+@import '_mixins';
+
+@import 'blocks/_button';
+@import 'blocks/_title';
+@import 'blocks/_subtitle';
+@import 'blocks/_product-catalog';
+@import 'blocks/_product-card';
+@import 'blocks/_additional-product-card';
+@import 'blocks/_instructions';
+@import 'blocks/_main-promo';
+@import 'blocks/_local-promo';
+@import 'blocks/_result-example';
+@import 'blocks/_control';
+@import 'blocks/_form';
+@import 'blocks/_program-card';
+@import 'blocks/_main-nav';
+@import 'blocks/_contacts';
+@import 'blocks/_copyright';
+
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  font-family: $font-family-oswald;
+  min-width: 320px;
+}
