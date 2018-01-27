@@ -10,9 +10,11 @@
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
+
   @include link;
 }
 
 .product-card__info-item {
   @include default-text(12px, 16px);
 }
+
