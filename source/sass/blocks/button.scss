@@ -18,27 +18,27 @@
 
   &--primary {
     color: $color-white;
-    background-color: $color-primary;
+    background-color: $color-apple;
 
     &:hover {
-      background-color: $color-primary-dark;
+      background-color: $color-apple-dark;
     }
 
     &:active {
-      color: $color-primary-pale;
+      color: $color-mantis;
     }
   }
 
   &--secondary {
     color: $color-tundora;
-    background-color: $color-secondary;
+    background-color: $color-concrete;
 
     &:hover {
-      background-color: $color-secondary-dark;
+      background-color: $color-silver;
     }
 
     &:active {
-      color: $color-secondary-pale;
+      color: $color-gallery;
     }
   }
 }

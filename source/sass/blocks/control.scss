@@ -6,12 +6,9 @@
 }
 
 .control__label {
-  @include control-text;
   color: $color-mineshaft;
 
   &--required::after {
     content: "*";
   }
 }
-
-
