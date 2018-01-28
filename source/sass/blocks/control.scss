@@ -1,0 +1,14 @@
+.control__label,
+.control__input,
+.control__text {
+  @include control-text;
+  color: $color-tundora;
+}
+
+.control__label {
+  color: $color-mineshaft;
+
+  &--required::after {
+    content: "*";
+  }
+}

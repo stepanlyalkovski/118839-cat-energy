@@ -1,0 +1,44 @@
+.button {
+  padding: 13px 0;
+  display: block;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 0;
+
+  &--small {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--primary {
+    color: $color-white;
+    background-color: $color-apple;
+
+    &:hover {
+      background-color: $color-apple-dark;
+    }
+
+    &:active {
+      color: $color-mantis;
+    }
+  }
+
+  &--secondary {
+    color: $color-tundora;
+    background-color: $color-concrete;
+
+    &:hover {
+      background-color: $color-silver;
+    }
+
+    &:active {
+      color: $color-gallery;
+    }
+  }
+}
