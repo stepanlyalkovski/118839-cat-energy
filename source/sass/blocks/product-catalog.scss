@@ -1,3 +1,8 @@
+.program-catalog {
+  /* temp for the layout task*/
+  min-height: 550px;
+}
+
 .product-catalog__action-text {
   font-size: 16px;
   line-height: 20px;
@@ -9,5 +14,36 @@
   &--small {
     @include default-text(12px, 16px);
     text-transform: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-catalog__action {
+    width: 325px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-catalog {
+    display: flex;
+    /* temp for the layout task*/
+    min-height: 380px;
+  }
+
+  .product-catalog__action {
+    width: 245px;
+  }
+
+  .product-catalog__additional-products {
+    display: flex;
+  }
+
+  .product-catalog__additional-list {
+    width: 895px;
   }
 }

@@ -2,3 +2,9 @@
   @include default-text(16px, 18px);
   text-align: center;
 }
+
+@media (min-width: $desktop-width) {
+  .form__row {
+    display: flex;
+  }
+}

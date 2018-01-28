@@ -4,6 +4,7 @@
 }
 
 .instructions__item {
+  width: 200px;
   position: relative;
   padding-left: 80px;
   margin-bottom: 35px;
@@ -33,5 +34,14 @@
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .instructions__list {
+    display: flex;
+    /* temp for the layout task*/
+    height: 500px;
+    flex-wrap: wrap;
   }
 }

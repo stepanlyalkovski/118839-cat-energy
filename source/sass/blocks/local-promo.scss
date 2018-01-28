@@ -5,3 +5,9 @@
 .local-promo__text {
   @include default-text(16px, 20px, $color-white);
 }
+
+@media (min-width: $desktop-width) {
+  .local-promo {
+    width: 245px;
+  }
+}

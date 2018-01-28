@@ -6,6 +6,10 @@
   @include default-text(12px);
 }
 
+.result-example__statistic-list {
+  margin: 0;
+}
+
 .result-example__statistic-data {
   font-size: 24px;
   line-height: 1;
@@ -20,4 +24,20 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .result-example__statistics {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .result-example__statistics {
+    display: block;
+  }
+
+  .result-example__body {
+    display: flex;
+  }
 }

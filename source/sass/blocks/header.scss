@@ -1,0 +1,30 @@
+.header__wrapper {
+  /* temp for the layout task*/
+  min-height: 60px;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    display: flex;
+    /* temp for the layout task */
+    min-height: 120px;
+  }
+
+  .header__wrapper {
+    width: 198px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header--absolute {
+    position: absolute;
+  }
+
+  .header__wrapper {
+    width: 250px;
+  }
+}
