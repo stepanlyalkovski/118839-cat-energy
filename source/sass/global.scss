@@ -5,18 +5,17 @@ html {
 body {
   font-family: $font-family-oswald;
   margin: 0 auto;
-  min-width: $mobile-width;
-  max-width: $mobile-width;
+  width: $mobile-width;
 }
 
 @media (min-width: $tablet-width) {
   body {
-    max-width: $tablet-width;
+    width: $tablet-width;
   }
 }
 
 @media (min-width: $desktop-width) {
   body {
-    max-width: $desktop-width;
+    width: $desktop-width;
   }
 }
