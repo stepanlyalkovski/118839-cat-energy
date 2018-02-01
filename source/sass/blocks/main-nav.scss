@@ -1,6 +1,4 @@
 .main-nav {
-  /* temp for the layout task*/
-  min-height: 180px;
   font-size: 20px;
   line-height: 1;
 }
@@ -25,17 +23,11 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    min-height: auto;
     width: 570px;
   }
 
   .main-nav__list {
-    width: 445px;
     display: flex;
-  }
-
-  .header__wrapper {
-    /* temp for the layout task*/
-    min-height: 60px;
+    justify-content: flex-end;
   }
 }

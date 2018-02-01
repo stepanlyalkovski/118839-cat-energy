@@ -16,6 +16,7 @@ body {
 
 @media (min-width: $desktop-width) {
   body {
+    position: relative;
     width: $desktop-width;
   }
 }

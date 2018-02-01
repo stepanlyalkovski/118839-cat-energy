@@ -1,0 +1,10 @@
+.program-catalog {
+  @include inner-container--responsive;
+}
+
+@media (min-width: $desktop-width) {
+  .program-catalog {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,11 +1,15 @@
+.instructions {
+  @include inner-container--responsive;
+}
+
 .instructions__list {
   padding: 0;
   list-style: none;
 }
 
 .instructions__item {
-  width: 200px;
   position: relative;
+  box-sizing: border-box;
   padding-left: 80px;
   margin-bottom: 35px;
 
@@ -40,8 +44,17 @@
 @media (min-width: $tablet-width) {
   .instructions__list {
     display: flex;
-    /* temp for the layout task*/
-    height: 500px;
     flex-wrap: wrap;
+  }
+
+  .instructions__item {
+    width: 270px;
+    padding-left: 0;
+    padding-right: 55px;
+
+    &::before {
+      display: block;
+      position: static;
+    }
   }
 }

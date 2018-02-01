@@ -1,3 +1,7 @@
+.result-example {
+  @include inner-container--sm;
+}
+
 .result-example__description {
   @include default-text(14px, 18px);
 }
@@ -7,10 +11,12 @@
 }
 
 .result-example__statistic-list {
+  display: flex;
   margin: 0;
 }
 
 .result-example__statistic-data {
+  display: block;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
@@ -27,17 +33,43 @@
 }
 
 @media (min-width: $tablet-width) {
+  .result-example {
+    padding: 0;
+  }
+
+  .result-example__title,
+  .result-example__info,
+  .result-example__control {
+    padding: 0 $container-padding--md;
+  }
+
   .result-example__statistics {
     display: flex;
+    justify-content: space-between;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .result-example {
+    padding: 0 $container-padding--lg;
+  }
+
+  .result-example__title,
+  .result-example__info,
+  .result-example__control {
+    padding: 0 0;
+  }
+
   .result-example__statistics {
     display: block;
   }
 
   .result-example__body {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .result-example__info {
+    width: 415px;
   }
 }

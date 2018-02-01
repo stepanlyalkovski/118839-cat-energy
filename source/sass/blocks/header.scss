@@ -1,13 +1,17 @@
+.header {
+  @include inner-container--responsive;
+}
+
 .header__wrapper {
-  /* temp for the layout task*/
+  display: flex;
   min-height: 60px;
+  padding: 10px 0;
 }
 
 @media (min-width: $tablet-width) {
   .header {
     display: flex;
-    /* temp for the layout task */
-    min-height: 120px;
+    justify-content: space-between;
   }
 
   .header__wrapper {
@@ -21,7 +25,9 @@
 
 @media (min-width: $desktop-width) {
   .header--absolute {
+    box-sizing: border-box;
     position: absolute;
+    width: 100%;
   }
 
   .header__wrapper {
