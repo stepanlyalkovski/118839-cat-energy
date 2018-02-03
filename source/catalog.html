@@ -10,28 +10,26 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
-        <a href="#" class="header__logo logo">
-        <img class="logo__image" src="http://placehold.it/150x100" alt="Cat Energy" width="70" height="50">
+        <a href="index.html" class="header__logo logo">
+        <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
+        <img class="logo__header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
         </a>
-        <a href="index.html" class="header__title logo-header">
-        <img class="logo-header__image" src="http://placehold.it/150x100" alt="Cat Energy" width="120" height="40">
-        </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="header__toggle header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
-      <nav class="header__nav main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+      <nav class="header__nav main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="main">

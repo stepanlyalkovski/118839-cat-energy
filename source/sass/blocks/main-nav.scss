@@ -4,14 +4,22 @@
 }
 
 .main-nav__link {
+  display: block;
+  padding-top: 23px;
+  padding-bottom: 22px;
+
+  @include inner-container--sm;
   font-weight: 500;
   text-transform: uppercase;
   color: $color-codgray;
 
-  @include link;
+  &[href] {
+    @include link;
+  }
 }
 
 .main-nav__item {
+  border-top: 1px solid $color-mercury;
   text-align: center;
 }
 
@@ -21,13 +29,68 @@
   list-style: none;
 }
 
-@media (min-width: $tablet-width) {
+@media (max-width: $mobile-width--max) {
   .main-nav {
-    width: 570px;
-  }
+    &--closed {
+      display: none;
+    }
 
+    &--nojs {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
   .main-nav__list {
     display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__item {
+    border-top: none;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 1px;
+        bottom: 0;
+        left: 1px;
+        height: 2px;
+        background: $color-apple;
+      }
+    }
+  }
+
+  .main-nav__link {
+    padding: 8px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__link {
+    font-size: 20px;
+  }
+
+  .main-nav__list--color-invert {
+    .main-nav__link {
+      color: $color-white;
+    }
+
+    .main-nav__item--active::after {
+      background-color: $color-white;
+    }
   }
 }
