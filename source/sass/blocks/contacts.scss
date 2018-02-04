@@ -3,8 +3,6 @@
   box-sizing: border-box;
   justify-content: space-between;
 
-  @include inner-container--sm;
-
   &--background-secondary {
     background-color: $color-concrete;
   }
@@ -13,8 +11,8 @@
 .contacts__text {
   width: 130px;
   padding-right: 10px;
-  font-size: 16px;
-  line-height: 20px;
+
+  @include text-size(16px, 20px);
   font-weight: 400;
   text-transform: uppercase;
   color: $color-codgray;
@@ -28,19 +26,27 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contacts {
-    padding: 0 70px;
+  .contacts__text {
+    width: 160px;
+
+    @include text-size(20px, 25px);
+  }
+
+  .contacts__address {
+    width: 160px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .contacts__address-city {
+    display: block;
+    margin-top: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .contacts {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-    width: 570px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $color-white;
+  .contacts__address {
+    width: 168px;
+    text-align: left;
   }
 }

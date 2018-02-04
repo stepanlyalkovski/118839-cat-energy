@@ -7,6 +7,7 @@
   @include text-size($font-size, $line-height);
   font-family: $font-family-arial;
   text-transform: none;
+  font-weight: 400;
   color: $color;
 }
 
