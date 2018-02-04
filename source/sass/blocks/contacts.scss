@@ -1,8 +1,18 @@
-.contacts--background-secondary {
-  background-color: $color-concrete;
+.contacts {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  @include inner-container--sm;
+
+  &--background-secondary {
+    background-color: $color-concrete;
+  }
 }
 
 .contacts__text {
+  width: 130px;
+  padding-right: 10px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -11,5 +21,26 @@
 }
 
 .contacts__address {
+  width: 140px;
+  margin: 0;
+
   @include default-text(14px, 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding: 0 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $color-white;
+  }
 }

@@ -1,4 +1,17 @@
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   @include default-text(16px);
   @include link;
+}
+
+.copyright__text {
+  padding-right: 22px;
+}
+
+.copyright__image {
+  width: 30px;
+  height: 35px;
 }

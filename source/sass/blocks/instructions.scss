@@ -1,3 +1,7 @@
+.instructions {
+  @include inner-container--responsive;
+}
+
 .instructions__list {
   padding: 0;
   list-style: none;
@@ -5,6 +9,7 @@
 
 .instructions__item {
   position: relative;
+  box-sizing: border-box;
   padding-left: 80px;
   margin-bottom: 35px;
 
@@ -33,5 +38,23 @@
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .instructions__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .instructions__item {
+    width: 270px;
+    padding-left: 0;
+    padding-right: 55px;
+
+    &::before {
+      display: block;
+      position: static;
+    }
   }
 }

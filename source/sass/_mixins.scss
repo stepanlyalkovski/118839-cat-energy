@@ -26,3 +26,30 @@
     opacity: 0.3;
   }
 }
+
+@mixin inner-container--sm {
+  padding-left: $container-padding--sm;
+  padding-right: $container-padding--sm;
+}
+
+@mixin inner-container--md {
+  padding-left: $container-padding--md;
+  padding-right: $container-padding--md;
+}
+
+@mixin inner-container--lg {
+  padding-left: $container-padding--lg;
+  padding-right: $container-padding--lg;
+}
+
+@mixin inner-container--responsive {
+  @include inner-container--sm;
+
+  @media (min-width: $tablet-width) {
+    @include inner-container--md;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include inner-container--lg;
+  }
+}

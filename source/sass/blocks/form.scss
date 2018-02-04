@@ -2,3 +2,34 @@
   @include default-text(16px, 18px);
   text-align: center;
 }
+
+.form__control-group-wrapper {
+  @include inner-container--sm;
+}
+
+.form__submit {
+  @include inner-container--sm;
+}
+
+.form__group {
+  @include inner-container--responsive;
+}
+
+@media (min-width: $tablet-width) {
+  .form__submit {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__row {
+    display: flex;
+    justify-content: space-between;
+
+    @include inner-container--lg;
+
+    .form__group {
+      padding: 0;
+    }
+  }
+}

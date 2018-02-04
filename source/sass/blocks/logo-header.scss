@@ -1,0 +1,13 @@
+.logo-header {
+  display: inline-block;
+}
+
+.logo-header__image {
+  width: 105px;
+  height: 20px;
+
+  &--lg {
+    width: 130px;
+    height: 25px;
+  }
+}

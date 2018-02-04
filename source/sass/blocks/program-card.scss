@@ -18,3 +18,9 @@
 .program-card__description {
   @include default-text(14px, 18px);
 }
+
+@media (min-width: $desktop-width) {
+  .program-card {
+    width: 570px;
+  }
+}

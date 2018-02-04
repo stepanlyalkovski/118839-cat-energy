@@ -4,7 +4,15 @@
   color: $color-white;
 }
 
-.main-promo__header {
+.main-promo__body::after {
+  content: "";
+  display: block;
+  height: 260px;
+  background: url("../img/index-can-mobile@1x.png") no-repeat center;
+}
+
+.main-promo__title {
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -15,4 +23,41 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+}
+
+.main-promo__wrapper {
+  @include inner-container--sm;
+}
+
+@media (min-width: $tablet-width) {
+  .main-promo {
+    min-height: 340px;
+    padding: 0 $container-padding--md;
+    background: none;
+    position: relative;
+  }
+
+  .main-promo__wrapper {
+    width: 380px;
+    padding-left: 90px;
+  }
+
+  .main-promo__body::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .main-promo__title,
+  .main-promo__slogan {
+    text-align: left;
+    color: $color-codgray;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-promo {
+    padding-top: 140px;
+  }
 }
