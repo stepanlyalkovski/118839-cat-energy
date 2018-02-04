@@ -54,3 +54,18 @@
     @include inner-container--lg;
   }
 }
+
+@mixin outer-container--sm {
+  margin-left: $container-padding--sm;
+  margin-right: $container-padding--sm;
+}
+
+@mixin outer-container--md {
+  margin-left: $container-padding--md;
+  margin-right: $container-padding--md;
+}
+
+@mixin outer-container--lg {
+  margin-left: $container-padding--lg;
+  margin-right: $container-padding--lg;
+}

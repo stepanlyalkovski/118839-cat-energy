@@ -34,6 +34,7 @@
   .product-catalog__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @include inner-container--md;
   }
@@ -72,5 +73,9 @@
 
   .product-catalog__item:not(:last-child) {
     margin-right: 80px;
+  }
+
+  .product-catalog__item {
+    width: 570px;
   }
 }
