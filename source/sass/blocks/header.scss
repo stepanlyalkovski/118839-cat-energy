@@ -1,7 +1,8 @@
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 13px 0;
+  padding: 13px 0 12px;
+  border-bottom: 1px solid $color-mercury;
 
   @include inner-container--sm;
   align-items: center;
@@ -36,6 +37,7 @@
   .header__wrapper {
     width: auto;
     padding: 0;
+    border-bottom: 0;
   }
 
   .header__toggle {
