@@ -98,20 +98,20 @@
     min-height: 610px;
     padding-top: 140px;
     background: url("../img/index-background-mobile@1x.jpg") no-repeat;
-    background-position: right top;
-    background-size: 680px 696px;
+    background-position: 121% top;
+    background-size: 731px auto;
   }
 
   .main-promo__wrapper {
     padding-top: 82px;
-    margin-left: 160px;
+    margin-left: 89px;
   }
 
   .main-promo__body {
     margin-bottom: 52px;
 
     &::after {
-      right: 330px;
+      right: 256px;
       left: auto;
       top: 134px;
       width: 521px;

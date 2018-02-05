@@ -3,6 +3,7 @@
 }
 
 .instructions__list {
+  margin: 30px 0 63px;
   padding: 0;
   list-style: none;
 }
@@ -11,13 +12,14 @@
   position: relative;
   box-sizing: border-box;
   padding-left: 80px;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
 
   @include default-text(14px, 18px);
 
   &::before {
     content: "";
     position: absolute;
+    top: -2px;
     left: 0;
     width: 60px;
     height: 60px;
@@ -42,19 +44,48 @@
 }
 
 @media (min-width: $tablet-width) {
+  .instructions {
+    border-bottom: 1px solid $color-mercury;
+  }
+
   .instructions__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    counter-reset: instructions-list;
   }
 
   .instructions__item {
+    position: relative;
     width: 270px;
     padding-left: 0;
-    padding-right: 55px;
+    padding-right: 24px;
+    margin: 32px 54px 101px 0;
+
+    @include text-size(16px, 24px);
 
     &::before {
-      display: block;
       position: static;
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      right: 8px;
+      z-index: -1;
+      width: 169px;
+      content: counters(instructions-list, ".") " ";
+      counter-increment: instructions-list;
+      text-align: center;
+      color: $color-concrete;
+
+      @include text-size(281px);
+      font-family: $font-family-oswald;
     }
   }
 }
