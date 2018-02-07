@@ -1,5 +1,6 @@
 .main-promo {
   background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+  background-position: top center;
   text-align: center;
   color: $color-white;
 }
@@ -35,7 +36,7 @@
   padding-top: 27px;
   padding-bottom: 22px;
 
-  @include outer-container--sm;
+  @include inner-container--sm;
 }
 
 @media (min-width: $tablet-width) {

@@ -36,6 +36,10 @@
   }
 }
 
+.product-card__container {
+  @include inner-container--sm;
+}
+
 .program-card__header {
   display: flex;
   align-items: center;

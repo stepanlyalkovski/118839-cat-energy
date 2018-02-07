@@ -1,11 +1,14 @@
-.header__wrapper {
+.header__inner {
   display: flex;
   justify-content: space-between;
-  padding: 13px 0 12px;
-  border-bottom: 1px solid $color-mercury;
 
   @include inner-container--sm;
   align-items: center;
+}
+
+.header__top {
+  padding: 13px 0 12px;
+  border-bottom: 1px solid $color-mercury;
 }
 
 .header__toggle {
@@ -34,10 +37,13 @@
     @include inner-container--md;
   }
 
-  .header__wrapper {
+  .header__top {
+    border: 0;
+  }
+
+  .header__inner {
     width: auto;
     padding: 0;
-    border-bottom: 0;
   }
 
   .header__toggle {
@@ -65,7 +71,7 @@
     }
   }
 
-  .header__wrapper {
+  .header__inner {
     width: 250px;
   }
 

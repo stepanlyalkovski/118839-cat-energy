@@ -35,12 +35,6 @@
 
 .footer__contacts {
   padding: 28px 0;
-
-  @include inner-container--sm;
-
-  &--secondary-background {
-    background-color: $color-concrete;
-  }
 }
 
 .footer__copyright {

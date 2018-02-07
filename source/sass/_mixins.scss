@@ -28,44 +28,62 @@
   }
 }
 
+// @mixin inner-container--sm {
+//   width: $content-width--sm;
+//   padding-left: $container-padding--sm;
+//   padding-right: $container-padding--sm;
+// }
+
+// @mixin inner-container--md {
+//   width: $content-width--md;
+//   padding-left: $container-padding--md;
+//   padding-right: $container-padding--md;
+// }
+
+// @mixin inner-container--lg {
+//   width: $content-width--lg;
+//   padding-left: $container-padding--lg;
+//   padding-right: $container-padding--lg;
+// }
+
+// @mixin inner-container--responsive {
+//   @include inner-container--sm;
+
+//   @media (min-width: $tablet-width) {
+//     @include inner-container--md;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     @include inner-container--lg;
+//   }
+// }
+
 @mixin inner-container--sm {
-  padding-left: $container-padding--sm;
-  padding-right: $container-padding--sm;
+  @media (min-width: $mobile-width) and (max-width: $mobile-width--max) {
+    width: $content-width--sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin inner-container--md {
-  padding-left: $container-padding--md;
-  padding-right: $container-padding--md;
+  @media (min-width: $tablet-width) and (max-width: $tablet-width--max) {
+    width: $content-width--md;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin inner-container--lg {
-  padding-left: $container-padding--lg;
-  padding-right: $container-padding--lg;
+  @media (min-width: $desktop-width) and (max-width: $desktop-width--max) {
+    width: $content-width--lg;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin inner-container--responsive {
   @include inner-container--sm;
-
-  @media (min-width: $tablet-width) {
-    @include inner-container--md;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include inner-container--lg;
-  }
-}
-
-@mixin outer-container--sm {
-  margin-left: $container-padding--sm;
-  margin-right: $container-padding--sm;
-}
-
-@mixin outer-container--md {
-  margin-left: $container-padding--md;
-  margin-right: $container-padding--md;
-}
-
-@mixin outer-container--lg {
-  margin-left: $container-padding--lg;
-  margin-right: $container-padding--lg;
+  @include inner-container--md;
+  @include inner-container--lg;
 }

@@ -1,5 +1,5 @@
 .button {
-  padding: 11px 4px;
+  padding: 10px 4px;
   display: block;
   box-sizing: border-box;
 
@@ -11,6 +11,8 @@
   border: 0;
 
   &--promo {
+    padding: 11px 4px;
+
     @include text-size(14px, 18px);
   }
 

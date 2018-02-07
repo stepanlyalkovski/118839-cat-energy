@@ -1,11 +1,13 @@
-.contacts {
+.contacts--background-secondary {
+  background-color: $color-concrete;
+}
+
+.contacts__inner {
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
 
-  &--background-secondary {
-    background-color: $color-concrete;
-  }
+  @include inner-container--sm;
 }
 
 .contacts__text {
