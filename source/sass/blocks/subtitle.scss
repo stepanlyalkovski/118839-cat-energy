@@ -1,6 +1,75 @@
 .subtitle {
-  font-size: 24px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    left: 0;
+    top: 18px;
+    width: 100vw;
+    border-bottom: solid 3px $color-apple;
+  }
+}
+
+.subtitle__inner {
+  width: $mobile-width;
+  margin: auto;
+}
+
+.subtitle__text {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  max-width: 182px;
+  margin: 4px 0 34px;
+  padding: 0 $container-padding--sm;
+
+  @include text-size(24px);
   font-weight: 400;
-  line-height: 1;
   color: $color-codgray;
+  background-color: $color-white;
+}
+
+@media (min-width: $tablet-width) {
+  .subtitle::after {
+    top: 25px;
+  }
+
+  .subtitle__inner {
+    @include inner-container--md;
+  }
+
+  .subtitle__text {
+    margin-bottom: 74px;
+    padding: 0 39px;
+    max-width: none;
+
+    @include text-size(36px);
+
+    &--smal-spaced {
+      margin-bottom: 54px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subtitle::after {
+    top: 27px;
+  }
+
+  .subtitle__inner {
+    width: $desktop-width;
+  }
+
+  .subtitle__text {
+    margin-top: 5px;
+    margin-bottom: 75px;
+
+    &--small-spaced {
+      margin-bottom: 57px;
+    }
+  }
 }

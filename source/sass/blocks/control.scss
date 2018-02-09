@@ -1,18 +1,213 @@
+.control {
+  display: flex;
+  align-items: center;
+}
+
+.control__text,
+.control__input {
+  border: 1px solid $color-mercury;
+  font-family: $font-family-oswald;
+
+  &:hover {
+    border-color: $color-silver;
+  }
+
+  &:focus {
+    border: 2px solid $color-tundora;
+    outline: none;
+  }
+
+  &:invalid {
+    border-color: $color-invalid;
+  }
+}
+
+.control__input {
+  box-sizing: border-box;
+  height: 45px;
+  padding: 0 12px;
+  flex-grow: 1;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+
+  &--phone {
+    padding-right: 43px;
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email {
+    padding-right: 50px;
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.control__input-group .control__input {
+  width: auto;
+}
+
 .control__label,
 .control__input,
 .control__text {
-  @include control-text;
+  @include text-size(16px, 18px);
+  text-transform: uppercase;
   color: $color-tundora;
 }
 
 .control__text {
   width: 100%;
+  resize: none;
+  padding: 14px 13px 27px;
 }
 
 .control__label {
+  margin-right: 15px;
   color: $color-mineshaft;
 
   &--required::after {
     content: "*";
+  }
+}
+
+.control__radio:checked,
+.control__radio:not(:checked),
+.control__checkbox:checked,
+.control__checkbox:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.control__radio:checked + .control__label,
+.control__radio:not(:checked) + .control__label,
+.control__checkbox:checked + .control__label,
+.control__checkbox:not(:checked) + .control__label {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0 5px 46px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.control__radio:checked + .control__label::before,
+.control__radio:not(:checked) + .control__label::before,
+.control__checkbox:checked + .control__label::before,
+.control__checkbox:not(:checked) + .control__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $color-silver;
+  background: $color-white;
+}
+
+.control__radio:checked + .control__label::before,
+.control__radio:not(:checked) + .control__label::before {
+  border-radius: 100%;
+}
+
+.control__radio:checked + .control__label::after,
+.control__radio:not(:checked) + .control__label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: $color-apple;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+.control__radio:not(:checked) + .control__label::after,
+.control__checkbox:not(:checked) + .control__label::after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.control__radio:checked + .control__label::after,
+.control__checkbox:checked + .control__label::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.control__checkbox:checked + .control__label::after,
+.control__checkbox:not(:checked) + .control__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 2px;
+  width: 10px;
+  height: 17px;
+  border: solid $color-apple;
+  border-width: 0 2px 2px 0;
+  transform: rotate(44deg);
+  transition: all 0.2s ease;
+}
+
+@media (min-width: $tablet-width) {
+  .control__input {
+    height: 52px;
+    padding: 0 16px;
+
+    @include text-size(20px);
+    background-position: right 18px center;
+  }
+
+  .control__label {
+    margin-right: 18px;
+
+    @include text-size(20px);
+  }
+
+  .control__text {
+    padding: 16px 16px 39px;
+
+    @include text-size(20px);
+  }
+
+  .control__radio:checked + .control__label::before,
+  .control__radio:not(:checked) + .control__label::before,
+  .control__checkbox:checked + .control__label::before,
+  .control__checkbox:not(:checked) + .control__label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    border: 1px solid $color-silver;
+    background: $color-white;
+  }
+
+  .control__radio:checked + .control__label,
+  .control__radio:not(:checked) + .control__label,
+  .control__checkbox:checked + .control__label,
+  .control__checkbox:not(:checked) + .control__label {
+    padding: 10px 0 10px 59px;
+  }
+
+  .control__radio:checked + .control__label::after,
+  .control__radio:not(:checked) + .control__label::after {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
+
+  .control__checkbox:checked + .control__label::after,
+  .control__checkbox:not(:checked) + .control__label::after {
+    left: 14px;
+    top: 7px;
+    width: 10px;
+    height: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .control__text {
+    padding: 15px 18px 38px;
   }
 }
