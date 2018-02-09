@@ -1,4 +1,4 @@
-.header__inner {
+.header__top-inner {
   display: flex;
   justify-content: space-between;
 
@@ -29,7 +29,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .header {
+  .header__container {
     display: flex;
     padding: 10px 0;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     border: 0;
   }
 
-  .header__inner {
+  .header__top-inner {
     width: auto;
     padding: 0;
   }
@@ -58,20 +58,20 @@
 }
 
 @media (min-width: $desktop-width) {
-  .header {
-    padding: 57px 0;
-
-    @include inner-container--lg;
-
-    &--absolute {
-      position: absolute;
-      z-index: 1;
-      box-sizing: border-box;
-      width: 100%;
-    }
+  .header--absolute {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
   }
 
-  .header__inner {
+  .header__container {
+    box-sizing: border-box;
+    padding: 44px 0;
+
+    @include inner-container--lg;
+  }
+
+  .header__top-inner {
     width: 250px;
   }
 
