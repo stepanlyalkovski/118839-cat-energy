@@ -23,23 +23,32 @@
     left: 0;
     width: 60px;
     height: 60px;
-    background: no-repeat 50% 50% $color-apple;
+    background: $color-apple 50% 50% no-repeat;
+    background-size: 50px;
   }
 
   &--leaf::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @include background-image-retina-x2("../img/advantage-leaf@2x.png");
   }
 
   &--boiled::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @include background-image-retina-x2("../img/advantage-powder@2x.png");
   }
 
   &--cutlery::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @include background-image-retina-x2("../img/advantage-dining@2x.png");
   }
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @include background-image-retina-x2("../img/advantage-clock@2x.png");
   }
 }
 

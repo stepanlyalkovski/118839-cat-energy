@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <script src="js/picturefill.min.js"></script> -->
+    <script src="/polyfills/picturefill.min.js"></script>
   </head>
   <body>
     <header class="header header--absolute">
@@ -95,8 +97,16 @@
             </div>
           </div>
           <div class="result-example__control">
-            <img class="result-example__before-image" src="http://placehold.it/150x100" alt="Живой пример"
-              width="150" height="100">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="product-card__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="80" height="80" alt="Кот До">
+            </picture>
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+              <img class="product-card__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="80" height="80" alt="Кот После">
+            </picture>
             <div class="result-example__toggle-control control">
               <label class="control__label" for="result-example-before">Было</label>
               <div class="control__toggle">

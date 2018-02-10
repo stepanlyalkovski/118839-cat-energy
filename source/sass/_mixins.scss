@@ -52,3 +52,10 @@
   @include inner-container--md;
   @include inner-container--lg;
 }
+
+
+@mixin background-image-retina-x2($imageUrl) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url($imageUrl);
+  }
+}
