@@ -1,3 +1,48 @@
 .control-group__body {
   @include inner-container--sm;
 }
+
+.control-group__control:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .control-group__control {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--radio:not(:last-child),
+    &--checkbox:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  .control-group--inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .control-group--inline .control-group__control {
+    max-width: 50%;
+    margin-bottom: 32px;
+
+    &:nth-child(odd) {
+      min-width: 343px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .control-group--inline .control-group__control {
+    width: 245px;
+    max-width: 285px;
+    margin-bottom: 32px;
+  }
+
+  .control-group--inline .control-group__control:nth-child(odd) {
+    min-width: auto;
+  }
+}

@@ -1,7 +1,15 @@
 .title {
-  margin: 0;
-  font-size: 36px;
+  margin: 17px 0 23px;
+
+  @include text-size(36px, 60px);
   font-weight: 400;
-  line-height: 60px;
   color: $color-codgray;
+}
+
+@media (min-width: $tablet-width) {
+  .title {
+    margin: 46px 0 40px;
+
+    @include text-size(60px);
+  }
 }

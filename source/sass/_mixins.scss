@@ -1,4 +1,4 @@
-@mixin text-size($font-size, $line-height) {
+@mixin text-size($font-size, $line-height: 1) {
   font-size: $font-size;
   line-height: $line-height;
 }
@@ -7,12 +7,8 @@
   @include text-size($font-size, $line-height);
   font-family: $font-family-arial;
   text-transform: none;
+  font-weight: 400;
   color: $color;
-}
-
-@mixin control-text {
-  @include text-size(16px, 18px);
-  text-transform: uppercase;
 }
 
 @mixin link {
@@ -28,28 +24,31 @@
 }
 
 @mixin inner-container--sm {
-  padding-left: $container-padding--sm;
-  padding-right: $container-padding--sm;
+  @media (min-width: $mobile-width) and (max-width: $mobile-width--max) {
+    width: $content-width--sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin inner-container--md {
-  padding-left: $container-padding--md;
-  padding-right: $container-padding--md;
+  @media (min-width: $tablet-width) and (max-width: $tablet-width--max) {
+    width: $content-width--md;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin inner-container--lg {
-  padding-left: $container-padding--lg;
-  padding-right: $container-padding--lg;
+  @media (min-width: $desktop-width) {
+    width: $content-width--lg;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin inner-container--responsive {
   @include inner-container--sm;
-
-  @media (min-width: $tablet-width) {
-    @include inner-container--md;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include inner-container--lg;
-  }
+  @include inner-container--md;
+  @include inner-container--lg;
 }

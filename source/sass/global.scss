@@ -3,20 +3,24 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: $font-family-oswald;
-  margin: 0 auto;
-  width: $mobile-width;
 }
 
-@media (min-width: $tablet-width) {
-  body {
-    width: $tablet-width;
-  }
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-@media (min-width: $desktop-width) {
-  body {
-    position: relative;
-    width: $desktop-width;
-  }
-}
+// @media (min-width: $tablet-width) {
+//   body {
+//     width: $tablet-width;
+//   }
+// }
+
+// @media (min-width: $desktop-width) {
+//   body {
+//     position: relative;
+//     width: $desktop-width;
+//   }
+// }

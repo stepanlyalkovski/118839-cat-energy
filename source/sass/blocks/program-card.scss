@@ -1,26 +1,189 @@
+.program-card {
+  position: relative;
+  padding: 30px 20px 22px;
+  font-size: 0;
+  background-color: $color-concrete;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $color-apple;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 13px;
+    top: 23px;
+    width: 67px;
+    height: 50px;
+  }
+
+  &--cat-slim::after {
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--cat-pro::after {
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.product-card__container {
+  @include inner-container--sm;
+}
+
+.program-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 29px;
+  margin-left: 71px;
+}
+
 .program-card__title {
-  font-size: 24px;
-  line-height: 37px;
+  margin: 0;
+
+  @include text-size(24px, 37px);
   text-transform: uppercase;
   font-weight: 400;
   color: $color-codgray;
 }
 
 .program-card__link {
-  font-size: 16px;
-  line-height: 1;
+  display: inline-flex;
+
+  @include text-size(16px);
   text-transform: uppercase;
 
   @include link;
   color: $color-codgray;
+
+  //TODO add arrow image for hover state
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    margin-left: 11px;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat center;
+  }
 }
 
 .program-card__description {
+  margin: 0 0 19px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid $color-alto;
+
   @include default-text(14px, 18px);
 }
 
+.program-card__image {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .program-card__title {
+    @include text-size(36px, 37px);
+  }
+
+  .program-card__description {
+    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 57px;
+
+    @include text-size(16px, 24px);
+  }
+
+  .program-card__link {
+    @include text-size(20px);
+
+    &::after {
+      margin-left: 24px;
+    }
+  }
+
+  .program-card__header {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width--max) {
+  .program-card {
+    padding: 75px 280px 60px 52px;
+
+    &::before {
+      left: auto;
+      right: 62px;
+      top: 91px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      left: auto;
+      right: 59px;
+      top: 82px;
+      width: 205px;
+      height: 190px;
+    }
+
+    &--cat-pro {
+      padding-right: 314px;
+
+      &::after {
+        right: 27px;
+        top: 89px;
+        width: 269px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+
 @media (min-width: $desktop-width) {
   .program-card {
+    box-sizing: border-box;
     width: 570px;
+    padding-top: 76px;
+    padding-left: 52px;
+    padding-right: 52px;
+
+    &::before {
+      left: 53px;
+      top: 46px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      left: 58px;
+      top: 39px;
+      width: 86px;
+      height: 100px;
+    }
+
+    &--cat-pro::after {
+      left: 33px;
+      top: 46px;
+      width: 136px;
+    }
+  }
+
+  .program-card__header {
+    margin-left: 161px;
+    margin-bottom: 74px;
+  }
+
+  .program-card__description {
+    margin-bottom: 31px;
   }
 }

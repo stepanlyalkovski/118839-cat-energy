@@ -4,11 +4,16 @@
   align-items: center;
 
   @include default-text(16px);
-  @include link;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
   padding-right: 22px;
+  font-weight: 400;
 }
 
 .copyright__image {

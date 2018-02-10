@@ -1,20 +1,19 @@
 .button {
-  padding: 13px 0;
+  padding: 10px 4px;
   display: block;
-  width: 100%;
+  box-sizing: border-box;
 
-  font-size: 16px;
+  @include text-size(16px, 20px);
   font-family: $font-family-oswald;
-  line-height: 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-
   border: 0;
 
-  &--small {
-    font-size: 14px;
-    line-height: 18px;
+  &--promo {
+    padding: 11px 4px;
+
+    @include text-size(14px, 18px);
   }
 
   &--primary {
@@ -41,5 +40,15 @@
     &:active {
       color: $color-gallery;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button--submit,
+  .button--promo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include text-size(20px);
   }
 }

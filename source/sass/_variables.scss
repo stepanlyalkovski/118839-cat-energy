@@ -9,6 +9,10 @@ $color-mantis: #8fc46e;
 $color-concrete:#f2f2f2;
 $color-silver: #b9b9b9;
 $color-gallery: #ebebeb;
+$color-mercury: #e6e6e6;
+$color-alto: #d9d9d9;
+$color-invalid: #ff8282;
+$color-silver: #cdcdcd;
 
 $color-primary: $color-apple;
 $color-primary-dark: $color-apple-dark;
@@ -21,9 +25,17 @@ $font-family-oswald: "Oswald", "Arial", "Geneva", "Helvetica", sans-serif;
 $font-size-base: 16px;
 
 $mobile-width: 320px;
+$mobile-width--max: 767px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$tablet-width--max: 1299px;
+$desktop-width: 1300px;
+$desktop-width--max: 1440px;
+
+$content-width--sm: 280px;
+$form-content-width--md: 636px;
+$content-width--md: 708px;
+$content-width--lg: 1220px;
 
 $container-padding--sm: 20px;
 $container-padding--md: 30px;
-$container-padding--lg: 110px;
+$container-padding--lg: 40px;

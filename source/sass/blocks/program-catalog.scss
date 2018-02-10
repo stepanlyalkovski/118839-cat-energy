@@ -2,9 +2,29 @@
   @include inner-container--responsive;
 }
 
+.program-catalog__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .program-catalog__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .program-catalog {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .program-catalog__item {
+    margin-top: 26px;
+    padding-bottom: 60px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

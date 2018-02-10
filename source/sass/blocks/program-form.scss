@@ -1,7 +1,45 @@
-.program-form__title {
+.program-form__container {
   @include inner-container--responsive;
 }
 
+.program-form__form {
+  padding: 25px 0;
+}
+
+.program-form__title {
+  margin: 16px 0 24px;
+}
+
 .program-form__text {
-  @include inner-container--responsive;
+  width: 230px;
+
+  @include text-size(14px, 18px);
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .program-form__text {
+    width: 340px;
+    padding-left: 40px;
+
+    @include text-size(20px, 30px);
+  }
+
+  .program-form__title {
+    margin: 31px 0 55px;
+  }
+
+  .program-form__form {
+    padding: 45px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-form__text {
+    padding: 0;
+  }
+
+  .program-form__title {
+    margin: 16px 0 55px;
+  }
 }
