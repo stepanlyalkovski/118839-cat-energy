@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="/polyfills/picturefill.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -44,8 +45,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__image-link" href="#">
-                <img class="product-card__image" src="img/chicken-small-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 500 г"
-                  width="80" height="80">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/catalog-chicken-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Pro 500 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -74,8 +78,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__link" href="#">
-                <img class="product-card__image" src="img/chicken-big-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 500 г"
-                  width="80" height="80">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Pro 1000 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -104,8 +111,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__link" href="#">
-                <img class="product-card__image" src="img/fish-small-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 500 г"
-                  width="80" height="80">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Pro 500 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -134,8 +144,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__link" href="#">
-                <img class="product-card__image" src="img/fish-big-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 1000 г"
-                  width="80" height="80">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Pro 1000 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -164,8 +177,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__link" href="#">
-                <img class="product-card__image" src="img/buckwheat-small-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 500 г"
-                  width="80" height="80">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                      <img class="product-card__image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Slim 1000 г">
+                    </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -194,8 +210,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__link" href="#">
-                <img class="product-card__image" src="img/buckwheat-big-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 1000 г"
-                  width="80" height="80">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Slim 1000 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -224,8 +243,11 @@
             <div class="product-card__container">
               <div class="product-card__body">
                 <a class="product-card__link" href="#">
-                <img class="product-card__image" src="img/rice-small-mobile@1x.jpg" alt="Упаковка Cat Energy Pro 500 г"
-                  width="80" height="80">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Slim 500 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
