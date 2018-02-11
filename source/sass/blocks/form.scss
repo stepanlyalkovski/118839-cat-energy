@@ -6,6 +6,7 @@ $inline-form-item-width: 570px;
 
 .form__submit {
   padding-top: 10px;
+  margin-bottom: 7px;
 
   @include inner-container--sm;
 }
@@ -52,10 +53,11 @@ $inline-form-item-width: 570px;
   .form__submit {
     box-sizing: border-box;
     display: flex;
+    margin: auto;
+    margin-bottom: 27px;
+    padding: 0 5px;
     align-items: center;
     width: $form-content-width--md;
-    margin: auto;
-    padding: 0 5px;
   }
 
   .form__submit-button {
@@ -65,6 +67,7 @@ $inline-form-item-width: 570px;
 
   .form__group {
     box-sizing: border-box;
+    justify-content: flex-start;
     width: $form-content-width--md;
     padding-left: 4px;
 
@@ -120,6 +123,7 @@ $inline-form-item-width: 570px;
 
   .form__group {
     padding: 0;
+    justify-content: space-between;
 
     @include inner-container--lg;
 
@@ -157,6 +161,7 @@ $inline-form-item-width: 570px;
 
   .form__submit {
     width: $content-width--lg;
+    margin-bottom: 37px;
     padding: 0 1px;
   }
 

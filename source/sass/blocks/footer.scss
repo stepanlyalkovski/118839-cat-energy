@@ -1,7 +1,9 @@
 .footer__bottom {
-  @include inner-container--responsive;
-
   background-color: $color-concrete;
+}
+
+.footer__bottom-inner {
+  @include inner-container--responsive;
 }
 
 .footer__map iframe {
@@ -42,7 +44,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .footer__bottom {
+  .footer__bottom-inner {
     display: flex;
     justify-content: space-between;
     min-height: 150px;
@@ -61,9 +63,9 @@
   }
 
   .footer__contacts {
-    padding: 0 70px;
-    min-height: 203px;
+    min-height: 197px;
     align-items: center;
+    padding: 5px 0 0;
   }
 
   .footer__social {
@@ -88,12 +90,21 @@
     margin-right: 30px;
   }
 
-  .footer__contacts {
+  .footer__contacts-container--lg {
     position: absolute;
+    left: 0;
+    right: 0;
     top: 95px;
-    left: 110px;
+  }
+
+  .footer__contacts-container-inner--lg {
+    @include inner-container--lg;
+  }
+
+  .footer__contacts {
+    display: block;
     width: 570px;
-    padding: 63px 76px;
+    padding: 0;
     background-color: $color-white;
   }
 }

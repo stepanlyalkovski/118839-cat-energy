@@ -21,7 +21,7 @@
   .control-group--inline {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
   }
 
@@ -36,6 +36,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .control-group--inline {
+    justify-content: space-between;
+  }
+
   .control-group--inline .control-group__control {
     width: 245px;
     max-width: 285px;

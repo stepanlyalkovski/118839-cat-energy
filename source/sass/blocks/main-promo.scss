@@ -9,6 +9,12 @@
   @include background-image-retina-x2("../img/index-background-mobile@2x.jpg");
 }
 
+.main-promo__container {
+  position: relative;
+
+  @include inner-container--responsive;
+}
+
 .main-promo__body {
   margin-bottom: 3px;
 
@@ -44,22 +50,23 @@
 .main-promo__wrapper {
   padding-top: 27px;
   padding-bottom: 22px;
-
-  @include inner-container--sm;
 }
 
 @media (min-width: $tablet-width) {
   .main-promo {
-    min-height: 841px;
     padding: 0 $container-padding--md;
     background: none;
     position: relative;
   }
 
+  .main-promo__container {
+    min-height: 841px;
+  }
+
   .main-promo__wrapper {
     width: 427px;
     padding-top: 30px;
-    margin-left: 89px;
+    margin-left: 88px;
   }
 
   .main-promo__body {
@@ -108,6 +115,8 @@
 
 @media (min-width: $desktop-width) {
   .main-promo {
+    max-width: $desktop-width--max;
+    margin: auto;
     min-height: 610px;
     padding-top: 140px;
     background: url("../img/index-background-desktop@1x.jpg") no-repeat;
@@ -117,18 +126,22 @@
     @include background-image-retina-x2("../img/index-background-desktop@2x.jpg");
   }
 
+  .main-promo__container {
+    min-height: auto;
+  }
+
   .main-promo__wrapper {
     padding-top: 82px;
-    margin-left: 89px;
+    margin-left: 80px;
   }
 
   .main-promo__body {
     margin-bottom: 52px;
 
     &::after {
-      right: 260px;
+      right: 219px;
       left: auto;
-      top: 133px;
+      top: -6px;
       width: 550px;
       height: 515px;
       background-position: center;

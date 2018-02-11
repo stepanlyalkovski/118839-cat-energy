@@ -52,6 +52,10 @@
   }
 }
 
+.instructions__text {
+  margin: 0;
+}
+
 @media (min-width: $tablet-width) {
   .instructions {
     border-bottom: 1px solid $color-mercury;
@@ -69,7 +73,6 @@
     position: relative;
     width: 270px;
     padding-left: 0;
-    padding-right: 24px;
     margin: 32px 54px 101px 0;
 
     @include text-size(16px, 24px);
@@ -96,5 +99,41 @@
       @include text-size(281px);
       font-family: $font-family-oswald;
     }
+  }
+
+  .instructions__text {
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instructions {
+    border-bottom: none;
+  }
+
+  .instructions__title {
+    margin: 75px 0 40px;
+  }
+
+  .instructions__list {
+    justify-content: flex-start;
+  }
+
+  .instructions__item {
+    margin-right: 0;
+    width: 245px;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+
+    &::after {
+      right: auto;
+      left: 93px;
+    }
+  }
+
+  .instructions__text {
+    padding-right: 0;
   }
 }
