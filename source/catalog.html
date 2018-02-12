@@ -14,11 +14,11 @@
         <div class="header__top">
           <div class="header__top-inner">
             <a href="index.html" class="header__logo logo">
-              <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
-              <img class="logo__header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
+            <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
+            <img class="logo__header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
             </a>
             <button class="header__toggle header__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
         </div>
@@ -77,7 +77,7 @@
           <article class="product-catalog__item product-card">
             <div class="product-card__container">
               <div class="product-card__body">
-                <a class="product-card__link" href="#">
+                <a class="product-card__image-link" href="#">
                   <picture>
                     <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
@@ -110,7 +110,7 @@
           <article class="product-catalog__item product-card">
             <div class="product-card__container">
               <div class="product-card__body">
-                <a class="product-card__link" href="#">
+                <a class="product-card__image-link" href="#">
                   <picture>
                     <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
@@ -143,7 +143,7 @@
           <article class="product-catalog__item product-card">
             <div class="product-card__container">
               <div class="product-card__body">
-                <a class="product-card__link" href="#">
+                <a class="product-card__image-link" href="#">
                   <picture>
                     <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
@@ -176,12 +176,12 @@
           <article class="product-catalog__item product-card">
             <div class="product-card__container">
               <div class="product-card__body">
-                <a class="product-card__link" href="#">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
-                      <img class="product-card__image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Slim 1000 г">
-                    </picture>
+                <a class="product-card__image-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                    <img class="product-card__image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" width="80" height="80" alt="Упаковка Cat Energy Slim 1000 г">
+                  </picture>
                 </a>
                 <div class="product-card__info">
                   <a class="product-card__link" href="#">
@@ -209,7 +209,7 @@
           <article class="product-catalog__item product-card">
             <div class="product-card__container">
               <div class="product-card__body">
-                <a class="product-card__link" href="#">
+                <a class="product-card__image-link" href="#">
                   <picture>
                     <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
@@ -242,7 +242,7 @@
           <article class="product-catalog__item product-card">
             <div class="product-card__container">
               <div class="product-card__body">
-                <a class="product-card__link" href="#">
+                <a class="product-card__image-link" href="#">
                   <picture>
                     <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
@@ -284,47 +284,79 @@
         </div>
         <div class="subtitle">
           <div class="subtitle__inner">
-            <h3 class="subtitle__text">Дополнительные товары</h3>
+            <h3 class="subtitle__text subtitle__text--long">Дополнительные товары</h3>
           </div>
         </div>
-        <div class="product-catalog__additional-products">
-          <div class="product-catalog__additional-list">
-            <section class="additional-product-card">
-              <h4 class="additional-product-card__title">Сахорозаменитель</h4>
-              <div class="additional-product-card__info">
-                <span class="additional-product-card__info-field">Объем</span>
-                <span class="additional-product-card__info-value">500 г</span>
-              </div>
-              <a class="button button--primary additional-product-card__button">Заказать</a>
-            </section>
-            <section class="additional-product-card">
-              <h4 class="additional-product-card__title">Питьевая вода</h4>
-              <div class="additional-product-card__info">
-                <span class="additional-product-card__info-field">5 литров</span>
-                <span class="additional-product-card__info-value">50 Р.</span>
-              </div>
-              <a class="additional-product-card__button button button--primary" href="#">Заказать</a>
-            </section>
-            <section class="additional-product-card">
-              <h4 class="additional-product-card__title">Молоко</h4>
-              <div class="additional-product-card__info">
-                <span class="additional-product-card__info-field">1 литр</span>
-                <span class="additional-product-card__info-value">100 Р.</span>
-              </div>
-              <a class="additional-product-card__button button button--primary" href="#">Заказать</a>
-            </section>
-            <section class="additional-product-card">
-              <h4 class="additional-product-card__title">Витамины</h4>
-              <div class="additional-product-card__info">
-                <span class="additional-product-card__info-field">1 упаковка (30 г)</span>
-                <span class="additional-product-card__info-value">300 Р.</span>
-              </div>
-              <a class="additional-product-card__button button button--primary" href="#">Заказать</a>
-            </section>
+        <div class="product-catalog__additional-products-container product-catalog__additional-products-container--lg">
+          <div class="product-catalog__additional-products">
+            <div class="product-catalog__additional-list">
+              <section class="additional-product-card">
+                <div class="additional-product-card__inner">
+                  <div class="additional-product-card__body">
+                    <h4 class="additional-product-card__title">Сахарозаменитель</h4>
+                    <div class="additional-product-card__info">
+                      <span class="additional-product-card__info-field">1 Упаковка <span class="additional-product-card__hidden-text"> (100 г)</span></span>
+                      <span class="additional-product-card__info-value">200 Р.</span>
+                    </div>
+                  </div>
+                  <a class="button button--primary additional-product-card__button">Заказать</a>
+                </div>
+              </section>
+              <section class="additional-product-card">
+                <div class="additional-product-card__inner">
+                  <div class="additional-product-card__body">
+                    <h4 class="additional-product-card__title">Питьевая вода</h4>
+                    <div class="additional-product-card__info">
+                      <span class="additional-product-card__info-field">5 литров</span>
+                      <span class="additional-product-card__info-value additional-product-card__info-value--long-space">50 Р.</span>
+                    </div>
+                  </div>
+                  <a class="additional-product-card__button button button--primary" href="#">Заказать</a>
+                </div>
+              </section>
+              <section class="additional-product-card">
+                <div class="additional-product-card__inner">
+                  <div class="additional-product-card__body">
+                    <h4 class="additional-product-card__title">Молоко</h4>
+                    <div class="additional-product-card__info">
+                      <span class="additional-product-card__info-field">1 литр</span>
+                      <span class="additional-product-card__info-value">100 Р.</span>
+                    </div>
+                  </div>
+                  <a class="additional-product-card__button button button--primary" href="#">Заказать</a>
+                </div>
+              </section>
+              <section class="additional-product-card">
+                <div class="additional-product-card__inner">
+                  <div class="additional-product-card__body">
+                    <h4 class="additional-product-card__title">Витамины</h4>
+                    <div class="additional-product-card__info">
+                      <span class="additional-product-card__info-field">1 упаковка (30 г)</span>
+                      <span class="additional-product-card__info-value">300 Р.</span>
+                    </div>
+                  </div>
+                  <a class="additional-product-card__button button button--primary" href="#">Заказать</a>
+                </div>
+              </section>
+            </div>
           </div>
-          <section class="local-promo local-promo--present">
+          <section class="product-catalog__local-promo local-promo local-promo--present">
+            <div class="local-promo__icon">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.5 60" style="enable-background:new 0 0 55.5 60;" xml:space="preserve">
+                <path
+                  d="M52.3,12.2h-7c0.5-0.7,0.8-1.4,1.1-2.2c0.6-2,0.4-4.1-0.6-5.9c-1-1.8-2.6-3.1-4.6-3.7c-2-0.6-4.1-0.4-5.9,0.6
+                  c-3.6,2-6.2,6.1-7.6,9c-1.4-2.9-4-7.1-7.6-9c-3.8-2-8.5-0.6-10.5,3.1c-1.4,2.7-1.2,5.8,0.5,8.1h-7c-1.7,0-3.1,1.4-3.1,3.1v9.4
+                  c0,1.7,1.4,3.1,3.1,3.1H4v26.1c0,3.3,2.7,6,6,6h35.5c3.3,0,6-2.7,6-6V27.8h0.8c1.7,0,3.1-1.4,3.1-3.1v-9.4
+                  C55.5,13.6,54.1,12.2,52.3,12.2z M36.5,3c1.3-0.7,2.7-0.8,4.1-0.4C41.9,3,43,3.9,43.7,5.2c0.7,1.3,0.8,2.7,0.4,4.1
+                  c-0.4,1.2-1.1,2.2-2.2,2.9H29.4C30.5,9.6,33,5,36.5,3z M11.7,5.2C13.2,2.6,16.4,1.6,19,3c3.5,1.9,6,6.6,7.1,9.1H13.5
+                  C11.2,10.7,10.4,7.6,11.7,5.2z M26.5,27.8v13.7H6.4V27.8H26.5z M6.4,53.9v-10h20.2v13.7H10C8,57.6,6.4,55.9,6.4,53.9z M45.5,57.6
+                  H28.9V43.9h20.2v10C49.1,55.9,47.5,57.6,45.5,57.6z M49.1,41.5H28.9V27.8h20.2V41.5z M53.1,24.7c0,0.4-0.3,0.7-0.7,0.7h-2
+                  c0,0,0,0,0,0s0,0,0,0H27.7c0,0,0,0,0,0s0,0,0,0H5.2c0,0,0,0,0,0s0,0,0,0h-2c-0.4,0-0.7-0.3-0.7-0.7v-9.4c0-0.4,0.3-0.7,0.7-0.7h49.2
+                  c0.4,0,0.7,0.3,0.7,0.7V24.7z"/>
+              </svg>
+            </div>
             <h3 class="visually-hidden">Акция на покупку товаров</h3>
-            <p class="local-promo__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="local-promo__text">Закажите все <br> и получите чехол для кота в подарок!</p>
           </section>
         </div>
       </section>
@@ -347,7 +379,7 @@
         <div class="footer__bottom-inner">
           <div class="footer__logo">
             <a href="#" class="footer__logo-link">
-              <img class="footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy" width="130" height="25">
+            <img class="footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy" width="130" height="25">
             </a>
           </div>
           <section class="footer__social social">

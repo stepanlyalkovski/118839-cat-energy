@@ -8,8 +8,8 @@
     z-index: 1;
     content: "";
     left: 0;
+    right: 0;
     top: 18px;
-    width: 100vw;
     border-bottom: solid 3px $color-apple;
   }
 }
@@ -31,6 +31,10 @@
   font-weight: 400;
   color: $color-codgray;
   background-color: $color-white;
+
+  &--long {
+    max-width: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
