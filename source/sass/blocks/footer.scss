@@ -40,6 +40,8 @@
 }
 
 .footer__copyright {
+  @include inner-container--sm;
+
   padding: 22px 0;
 }
 
@@ -47,7 +49,7 @@
   .footer__bottom-inner {
     display: flex;
     justify-content: space-between;
-    min-height: 150px;
+    height: 150px;
   }
 
   .footer__map iframe {
@@ -70,6 +72,7 @@
 
   .footer__social {
     width: 135px;
+    border: 0;
   }
 
   .footer__logo {

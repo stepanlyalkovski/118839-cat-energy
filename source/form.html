@@ -14,11 +14,15 @@
         <div class="header__top">
           <div class="header__top-inner">
             <a href="index.html" class="header__logo logo">
-              <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
-              <img class="logo__header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
+              </picture>
+              <img class="logo__header logo__header--sm" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
             </a>
             <button class="header__toggle header__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
         </div>
@@ -50,11 +54,11 @@
               <div class="form__group control-group">
                 <div class="control-group__control control">
                   <label class="control__label control__label--required" for="name">Имя:</label>
-                  <input class="control__input" id="name" type="text" name="name" value="Барсик">
+                  <input class="control__input" id="name" type="text" name="name" value="Барсик" required>
                 </div>
                 <div class="control-group__control control">
                   <label class="control__label control__label--required" for="weight">Вес (кг):</label>
-                  <input class="control__input" id="weight" type="number" name="weight" value="7">
+                  <input class="control__input" id="weight" type="number" name="weight" value="7" required>
                 </div>
                 <div class="control-group__control control">
                   <label class="control__label" for="age">Возраст (лет):</label>
@@ -91,11 +95,30 @@
             <div class="form__group form__group--inline-lg control-group">
               <div class="control-group__control  control">
                 <label class="control__label control__label--required" for="name">E-mail:</label>
-                <input class="control__input control__input--email" id="email" type="email" name="email" value="Kuklachev@gmail.com">
+                <div class="control__input-box">
+                  <input class="control__input" id="email" type="email" name="email" value="Kuklachev@gmail.com" required>
+                  <div class="control__input-icon">
+                    <svg class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                      <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div class="control-group__control control">
                 <label class="control__label control__label--required" for="name">Телефон:</label>
-                <input class="control__input control__input--phone" id="phone" type="tel" name="phone" value="8 (960) 900-60-90">
+                <div class="control__input-box">
+                  <input class="control__input control__input--phone" id="phone" type="tel" name="phone" value="8 (960) 900-60-90" required>
+                  <div class="control__input-icon">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                        <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                        <path
+                          d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                        c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                        C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                        C7.8,20,8.1,19.7,8.1,19.4z"/>
+                      </svg>
+                    </div>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -161,7 +184,7 @@
         <div class="footer__bottom-inner">
           <div class="footer__logo">
             <a href="#" class="footer__logo-link">
-              <img class="footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy" width="130" height="25">
+            <img class="footer__logo-image" src="img/logo-footer.svg" alt="Cat Energy" width="130" height="25">
             </a>
           </div>
           <section class="footer__social social">

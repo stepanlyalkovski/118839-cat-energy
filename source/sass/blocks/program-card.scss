@@ -62,16 +62,20 @@
   @include text-size(16px);
   text-transform: uppercase;
 
-  @include link;
+  @include link--active;
   color: $color-codgray;
 
-  //TODO add arrow image for hover state
   &::after {
     content: "";
     display: inline-block;
     width: 25px;
     margin-left: 11px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat center;
+  }
+
+  &:hover::after {
+    width: 28px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 }
 

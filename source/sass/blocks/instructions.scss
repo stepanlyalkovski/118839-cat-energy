@@ -1,5 +1,5 @@
 .instructions {
-  @include inner-container--responsive;
+  @include inner-container--sm;
 }
 
 .instructions__list {
@@ -58,7 +58,12 @@
 
 @media (min-width: $tablet-width) {
   .instructions {
+    padding-bottom: 1px;
     border-bottom: 1px solid $color-mercury;
+  }
+
+  .instructions__title {
+    @include inner-container--md;
   }
 
   .instructions__list {
@@ -66,6 +71,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
+
+    @include inner-container--md;
+
     counter-reset: instructions-list;
   }
 
@@ -109,6 +117,8 @@
 @media (min-width: $desktop-width) {
   .instructions {
     border-bottom: none;
+
+    @include inner-container--lg;
   }
 
   .instructions__title {

@@ -18,6 +18,12 @@
     opacity: 0.6;
   }
 
+  @include link--active;
+}
+
+@mixin link--active {
+  text-decoration: none;
+
   &:active {
     opacity: 0.3;
   }

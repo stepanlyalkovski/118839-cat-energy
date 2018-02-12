@@ -14,8 +14,12 @@
         <div class="header__top">
           <div class="header__top-inner">
             <a href="index.html" class="header__logo logo">
-            <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
-            <img class="logo__header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="logo__icon" src="img/icon-logo-mobile.svg" alt="Cat Energy" width="35" height="40">
+              </picture>
+              <img class="logo__header logo__header--sm" src="img/logo-mobile-header.svg" alt="Cat Energy" width="105" height="25">
             </a>
             <button class="header__toggle header__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -274,6 +278,17 @@
           </article>
           <section class="product-catalog__action">
             <div class="product-catalog__action-inner">
+              <div class="product-catalog__action-inner-icon product-catalog__action-inner-icon--sm">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+                  <polygon points="30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 "/>
+                </svg>
+              </div>
+              <div class="product-catalog__action-inner-icon product-catalog__action-inner-icon--md">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                  <polygon points="60,29.5 30.5,29.5 30.5,0 29.5,0 29.5,29.5 0,29.5 0,30.5 29.5,30.5 29.5,60 30.5,60 30.5,30.5
+                  60,30.5 "/>
+                </svg>
+              </div>
               <h3 class="product-catalog__action-text">Показать ещё 100500 товаров</h3>
               <p class="product-catalog__action-text product-catalog__action-text--small">
                 На самом деле вкусов гораздо больше!
