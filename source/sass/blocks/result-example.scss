@@ -138,14 +138,27 @@
       position: absolute;
       left: 0;
       right: 0;
-      z-index: 0;
+      z-index: 1;
       height: 169px;
       background-color: $color-white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      width: 50%;
+      background-color: $color-gallery;
     }
   }
 
   .result-example__toggle-inner {
     box-sizing: border-box;
+    position: relative;
+    z-index: 2;
     padding: 0 69px;
 
     @include inner-container--md;
@@ -162,7 +175,7 @@
 
   .result-example__image {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 690px;
     max-width: none;
     margin: auto;
@@ -226,6 +239,7 @@
   }
 
   .result-example__body {
+    position: relative;
     padding-top: 71px;
     background-color: $color-concrete;
   }
@@ -243,7 +257,7 @@
 
   .result-example__image {
     position: absolute;
-    top: -261px;
+    top: -190px;
     width: 690px;
     padding-left: 16px;
   }
@@ -267,7 +281,7 @@
   }
 
   .result-example__control {
-    position: relative;
+    position: static;
     width: 666px;
     padding-top: 277px;
     padding-bottom: 55px;
@@ -275,6 +289,13 @@
 
     &::before {
       content: none;
+    }
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 327px;
     }
   }
 
