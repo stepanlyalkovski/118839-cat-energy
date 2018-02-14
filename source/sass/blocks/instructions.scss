@@ -64,6 +64,8 @@
 
   .instructions__title {
     @include inner-container--md;
+
+    margin-top: 47px;
   }
 
   .instructions__list {
@@ -81,7 +83,7 @@
     position: relative;
     width: 270px;
     padding-left: 0;
-    margin: 32px 54px 101px 0;
+    margin: 33px 54px 100px 0;
 
     @include text-size(16px, 24px);
 

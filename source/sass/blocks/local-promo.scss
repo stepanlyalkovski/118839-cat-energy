@@ -18,8 +18,7 @@
 .local-promo__icon {
   width: 55px;
   height: auto;
-  margin: auto;
-  margin-bottom: 58px;
+  margin: auto auto 61px;
   fill: $color-white;
 }
 
@@ -29,8 +28,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 67px 96px 69px 91px;
+    padding: 65px 96px 72px 91px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: cover;
 
     @include background-image-retina-x2("../img/gift-photo-tablet@2x.jpg");
   }
@@ -40,7 +40,7 @@
   }
 
   .local-promo__text {
-    margin: 0;
+    margin: 7px 0 0;
     text-align: left;
   }
 }
