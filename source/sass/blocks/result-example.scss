@@ -156,43 +156,6 @@
     width: auto;
   }
 
-  .control__toggle {
-    position: absolute;
-    top: 5px;
-    left: calc(50% - 17px);
-    z-index: 1;
-    margin: 0;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-
-    &::before {
-      top: 13px;
-      left: 13px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-  }
-
-  .control__toggle-range {
-    position: relative;
-    width: 430px;
-    padding: 26px 0;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 20px;
-      z-index: 0;
-      height: 6px;
-      border-radius: 10px;
-      background-color: $color-alto;
-    }
-  }
-
   .result-example__image-container {
     margin-bottom: 7px;
   }
