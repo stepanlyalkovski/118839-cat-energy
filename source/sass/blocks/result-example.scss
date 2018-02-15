@@ -239,16 +239,18 @@
   }
 
   .result-example__body {
-    position: relative;
-    padding-top: 71px;
-    background-color: $color-concrete;
+    padding-top: 0;
+    background: linear-gradient(to right, $color-concrete 50%, $color-gallery 0%);
   }
 
   .result-example__body-inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
 
     @include inner-container--lg;
+    padding-top: 71px;
+    background-color: $color-concrete;
   }
 
   .result-example__statistics {
@@ -294,7 +296,7 @@
     &::after {
       top: 0;
       bottom: 0;
-      right: 0;
+      right: -42px;
       width: 327px;
     }
   }

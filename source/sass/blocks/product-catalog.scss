@@ -62,7 +62,8 @@
 .product-catalog__action-inner-icon {
   display: none;
   width: 30px;
-  margin: 0 auto 21px;
+  height: 30px;
+  margin: 0 auto 23px;
   fill: $color-alto;
 
   &--sm {
@@ -137,7 +138,8 @@
 
   .product-catalog__action-inner-icon {
     width: 60px;
-    margin-bottom: 47px;
+    height: 60px;
+    margin-bottom: 49px;
 
     &--sm {
       display: none;
