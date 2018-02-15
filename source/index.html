@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP2Vdr0SeBhYlJriBT90TCUlMNVCBI-7g&callback=initMap">
+    </script>
   </head>
   <body>
     <header class="header header--absolute">
@@ -157,7 +159,8 @@
         </div>
       </div>
       <div class="footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sby!4v1516719989895" allowfullscreen></iframe>
+        <div id="map"></div>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sby!4v1516719989895" allowfullscreen></iframe> -->
       </div>
       <div class="footer__bottom">
         <div class="footer__bottom-inner">
@@ -170,9 +173,9 @@
             <h2 class="visually-hidden">Социальные ссылки</h2>
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <a class="social__link" href="https://vk.com/htmlacademy">
                   Мы в Вконтакте
-                  <svg class="social__link-image social__link-image--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+                  <svg class="social__link-image social__link-image--vkontakte social__link-image--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                     <g>
                       <path
                         d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -192,7 +195,7 @@
                       c0,0,0,0,0-0.1c0-0.2,0-2,1.2-2.3C13.5,8.3,13.6,8.3,13.7,8.3z"/>
                     </g>
                   </svg>
-                  <svg class="social__link-image social__link-image--md"
+                  <svg class="social__link-image social__link-image--vkontakte social__link-image--md"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -236,34 +239,32 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <a class="social__link" href="https://www.instagram.com/htmlacademy">
                   Мы в Инстаграме
-                  <svg class="social__link-image social__link-image--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+                  <svg class="social__link-image social__link-image--instagram social__link-image--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
                     <path  d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1
                     L11.8,1 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0L11.8,0z"/>
                     <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C4.9,6.3,6.3,4.9,8,4.9 M8,3.9
                     C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9L8,3.9z"/>
-                    <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
+                    <circle cx="12.3" cy="3.7" r="0.9"/>
                   </svg>
-                  <svg class="social__link-image social__link-image--md" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="-3 -3 23 23" enable-background="new -3 -3 23 23" xml:space="preserve">
+                  <svg class="social__link-image social__link-image--instagram social__link-image--md" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="-3 -3 23 23" enable-background="new -3 -3 23 23" xml:space="preserve">
                     <path
-                      fill="#231F20"
                       d="M14.002-1.501c2.48,0,4.498,2.02,4.498,4.501v11c0,2.481-2.018,4.5-4.498,4.5H3.01
                     c-2.48,0-4.498-2.019-4.498-4.5V3c0-2.481,2.018-4.5,4.498-4.5h10.992 M14.002-3H3.01C-0.29-3-2.987-0.301-2.987,3v11.001
                     C-2.987,17.299-0.29,20,3.01,20h10.995C17.301,20,20,17.299,20,13.999V3C20-0.301,17.301-3,14.002-3L14.002-3z"/>
                     <path
-                      fill="#231F20"
                       d="M8.506,4.078c2.44,0,4.429,1.985,4.429,4.428c0,2.44-1.989,4.43-4.429,4.43c-2.443,0-4.428-1.989-4.428-4.43
                     C4.078,6.063,6.063,4.078,8.506,4.078 M8.506,2.578c-3.273,0-5.928,2.654-5.928,5.928s2.654,5.927,5.928,5.927
                     c3.274,0,5.926-2.653,5.926-5.927S11.78,2.578,8.506,2.578L8.506,2.578z"/>
-                    <circle fill="#231F20" cx="14.646" cy="2.379" r="1.341"/>
+                    <circle cx="14.646" cy="2.379" r="1.341"/>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <a class="social__link" href="https://www.facebook.com/htmlacademy">
                   Мы в Фейсбуке
-                  <svg class="social__link-image social__link-image--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+                  <svg class="social__link social__link-image--facebook social__link-image--sm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                     <g>
                       <path
                         d="M7.1,19H2v-8.8H0V5.8h1.9c-0.1-2,0.2-3.4,1.1-4.4C3.8,0.5,5,0.1,6.5,0L10,0v4.2H7.2C7.1,4.4,7,5,7,5.8H10v4.4H7.1V19z
@@ -271,7 +272,7 @@
                       H1.1v2.3h2V18z"/>
                     </g>
                   </svg>
-                  <svg class="social__link-image social__link-image--md"
+                  <svg class="social__link-image social__link-image--facebook social__link-image--md"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -297,8 +298,23 @@
           <section class="footer__copyright copyright">
             <h2 class="visually-hidden">Информация о разработчике</h2>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <b class="copyright__text">HTML Academy</b>
-            <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Html Academy" width="150" height="100">
+              <b class="copyright__text">HTML Academy</b>
+              <svg class="copyright__image" width="27" height="35"
+              version="1.0"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="26.943px"
+              height="34.09px"
+              viewBox="0 0 26.943 34.09"
+              enable-background="new 0 0 26.943 34.09"
+              xml:space="preserve"
+              fill="#666666">
+              <path
+                d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+              </svg>
             </a>
           </section>
         </div>

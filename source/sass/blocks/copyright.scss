@@ -4,10 +4,14 @@
   align-items: center;
 
   @include default-text(16px);
-  text-decoration: none;
 
-  &:active {
-    opacity: 0.3;
+  @include link--active;
+  &:hover .copyright__image {
+    fill: $color-apple;
+  }
+
+  &:active .copyright__image {
+    fill: $color-apple;
   }
 }
 
@@ -17,6 +21,6 @@
 }
 
 .copyright__image {
-  width: 30px;
+  width: 27px;
   height: 35px;
 }

@@ -22,6 +22,7 @@
 
 .footer__logo-link {
   display: inline-block;
+  @include link(0.8, 0.6);
 }
 
 .footer__logo-image {
@@ -30,7 +31,7 @@
 }
 
 .footer__social {
-  padding: 21px 0;
+  padding: 21px 0 18px;
   border-top: 1px solid $color-alto;
   border-bottom: 1px solid $color-alto;
 }
@@ -42,7 +43,7 @@
 .footer__copyright {
   @include inner-container--sm;
 
-  padding: 22px 0;
+  padding: 21px 0 22px;
 }
 
 @media (min-width: $tablet-width) {
@@ -71,7 +72,7 @@
   }
 
   .footer__social {
-    width: 135px;
+    width: 141px;
     border: 0;
   }
 
