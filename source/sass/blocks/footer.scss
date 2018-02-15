@@ -6,7 +6,7 @@
   @include inner-container--responsive;
 }
 
-.footer__map iframe {
+.footer__map {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -54,7 +54,7 @@
     height: 150px;
   }
 
-  .footer__map iframe {
+  .footer__map {
     height: 394px;
   }
 
@@ -87,7 +87,7 @@
     position: relative;
   }
 
-  .footer__map iframe {
+  .footer__map {
     height: 400px;
   }
 
@@ -107,6 +107,8 @@
   }
 
   .footer__contacts {
+    position: relative;
+    z-index: 1;
     display: block;
     width: 570px;
     padding: 0;
