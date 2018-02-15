@@ -4,8 +4,8 @@
   align-items: center;
 
   @include default-text(16px);
-
   @include link--active;
+
   &:hover .copyright__image {
     fill: $color-apple;
   }

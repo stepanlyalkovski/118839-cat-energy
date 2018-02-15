@@ -11,6 +11,7 @@
   display: inline-block;
   width: 54px;
   text-align: center;
+
   @include link--active;
 
   &:hover {
@@ -31,7 +32,7 @@
     display: inline-block;
   }
 
-  &--instagram  {
+  &--instagram {
     width: 16px;
     height: 20px;
   }
@@ -41,7 +42,7 @@
     height: 23px;
   }
 
-  &--vkontakte  {
+  &--vkontakte {
     width: 22px;
     height: 16px;
   }
@@ -61,7 +62,7 @@
       display: inline-block;
     }
 
-    &--instagram  {
+    &--instagram {
       width: 23px;
       height: 25px;
     }
@@ -71,7 +72,7 @@
       height: 28px;
     }
 
-    &--vkontakte  {
+    &--vkontakte {
       width: 30px;
       height: 16px;
     }
@@ -84,8 +85,4 @@
   .social__list {
     justify-content: flex-start;
   }
-}
-
-@media (min-width: $desktop-width) {
-
 }
