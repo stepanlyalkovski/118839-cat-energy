@@ -1,28 +1,74 @@
 .result-example {
+  background-color: $color-concrete;
+}
+
+.result-example__title {
+  @include inner-container--sm;
+}
+
+.result-example__info {
+  @include inner-container--sm;
+  margin-bottom: 34px;
+}
+
+.result-example__image-container {
+  margin-bottom: 33px;
+}
+
+.result-example__toggle-control-inner {
   @include inner-container--sm;
 }
 
 .result-example__description {
+  margin: 0 0 25px;
+  padding-right: 5px;
+
   @include default-text(14px, 18px);
 }
 
+.result-example__statistics {
+  text-align: center;
+}
+
 .result-example__statistic-item {
+  position: relative;
+  padding-bottom: 15px;
+
   @include default-text(12px);
 }
 
 .result-example__statistic-list {
   display: flex;
-  margin: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 19px;
+  padding: 0;
+  align-items: center;
+  list-style: none;
 }
 
 .result-example__statistic-data {
   display: block;
-  font-size: 24px;
-  line-height: 1;
+  box-sizing: border-box;
+  width: 124px;
+  border: 1px solid $color-alto;
+  padding: 13px 5px 17px;
+
+  @include text-size(24px);
   font-weight: 400;
+  word-wrap: break-word;
   font-family: $font-family-oswald;
   text-transform: uppercase;
   color: $color-codgray;
+}
+
+.result-example__statistic-label {
+  position: absolute;
+  bottom: 0;
+  left: 17px;
+  width: 59px;
+  padding: 0 14px;
+  background-color: $color-concrete;
 }
 
 .result-example__money-spent {
@@ -32,44 +78,243 @@
   text-transform: uppercase;
 }
 
+.result-example__image {
+  display: block;
+  width: 100%;
+  max-width: $mobile-width;
+  margin: auto;
+
+  &--after {
+    display: none;
+  }
+}
+
+.result-example__control {
+  padding-bottom: 37px;
+}
+
+.result-example__toggle-control {
+  justify-content: space-around;
+  width: 200px;
+  margin: auto;
+}
+
 @media (min-width: $tablet-width) {
   .result-example {
     padding: 0;
+    background-color: transparent;
   }
 
-  .result-example__title,
-  .result-example__info,
+  .result-example__body {
+    padding-top: 23px;
+  }
+
+  .result-example__info {
+    @include inner-container--md;
+
+    margin-bottom: 81px;
+  }
+
+  .result-example__title {
+    margin-top: 44px;
+
+    @include inner-container--md;
+  }
+
+  .result-example__description {
+    margin-bottom: 53px;
+    padding-right: 7px;
+
+    @include text-size(16px, 24px);
+  }
+
   .result-example__control {
-    padding: 0 $container-padding--md;
+    position: relative;
+    padding-bottom: 56px;
+    background-color: $color-concrete;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      height: 169px;
+      background-color: $color-white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      width: 50%;
+      background-color: $color-gallery;
+    }
+  }
+
+  .result-example__toggle-inner {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    padding: 0 69px;
+
+    @include inner-container--md;
+  }
+
+  .result-example__toggle-control {
+    justify-content: space-between;
+    width: auto;
+  }
+
+  .result-example__image-container {
+    margin-bottom: 7px;
+  }
+
+  .result-example__image {
+    position: relative;
+    z-index: 2;
+    width: 690px;
+    max-width: none;
+    margin: auto;
+    padding-left: 13px;
   }
 
   .result-example__statistics {
     display: flex;
     justify-content: space-between;
   }
+
+  .result-example__statistic-list {
+    margin-bottom: 0;
+  }
+
+  .result-example__statistic-item {
+    margin-right: 42px;
+    padding-bottom: 5px;
+
+    @include text-size(14px);
+  }
+
+  .result-example__statistic-data {
+    width: 162px;
+    padding: 14px 8px 19px;
+
+    @include text-size(30px, 37px);
+  }
+
+  .result-example__statistic-label {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .result-example__statistic-label-text {
+    display: inline-block;
+    padding: 0 9px;
+    background-color: $color-white;
+  }
+
+  .result-example__money-spent {
+    width: 180px;
+    padding: 8px 0;
+
+    @include text-size(20px, 28px);
+    text-align: right;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .result-example {
-    padding: 0 $container-padding--lg;
+  .result-example__title {
+    @include inner-container--lg;
+
+    margin-top: 24px;
+    margin-bottom: 75px;
   }
 
-  .result-example__title,
-  .result-example__info,
-  .result-example__control {
-    padding: 0 0;
+  .result-example__body {
+    padding-top: 0;
+    background: linear-gradient(to right, $color-concrete 50%, $color-gallery 0%);
+  }
+
+  .result-example__body-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @include inner-container--lg;
+    padding-top: 71px;
+    background-color: $color-concrete;
   }
 
   .result-example__statistics {
     display: block;
   }
 
-  .result-example__body {
-    display: flex;
-    justify-content: space-between;
+  .result-example__image {
+    position: absolute;
+    top: -190px;
+    width: 690px;
+    padding-left: 16px;
   }
 
   .result-example__info {
-    width: 415px;
+    width: 440px;
+    margin-bottom: 0;
+  }
+
+  .result-example__description {
+    margin-bottom: 68px;
+  }
+
+  .result-example__statistic-list {
+    justify-content: flex-start;
+    margin-bottom: 43px;
+  }
+
+  .result-example__statistic-label-text {
+    background-color: $color-concrete;
+  }
+
+  .result-example__control {
+    position: static;
+    width: 666px;
+    padding-top: 277px;
+    padding-bottom: 55px;
+    background-color: $color-concrete;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      right: -42px;
+      width: 327px;
+    }
+  }
+
+  .result-example__toggle-control {
+    margin-left: 95px;
+  }
+
+  .result-example__toggle-inner {
+    padding: 0;
+  }
+
+  .result-example__money-spent {
+    width: auto;
+    text-align: left;
+  }
+
+  .result-example__money-spent-value {
+    margin-left: 59px;
   }
 }

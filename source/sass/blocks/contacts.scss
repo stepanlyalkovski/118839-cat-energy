@@ -1,3 +1,8 @@
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
 .contacts--background-secondary {
   background-color: $color-concrete;
 }
@@ -34,6 +39,11 @@
     @include text-size(20px, 25px);
   }
 
+  .contacts__inner {
+    @include inner-container--md;
+    padding: 0 41px;
+  }
+
   .contacts__address {
     width: 160px;
     font-size: 16px;
@@ -50,5 +60,9 @@
   .contacts__address {
     width: 168px;
     text-align: left;
+  }
+
+  .contacts__inner {
+    padding: 64px 76px 57px;
   }
 }

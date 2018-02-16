@@ -14,6 +14,20 @@ navToggle.addEventListener('click', function() {
   }
 });
 
+function initMap() {
+  var uluru = {lat: 59.938794, lng: 30.323083};
+  var map = new google.maps.Map(document.getElementsByClassName('js-map')[0], {
+    zoom: 17,
+    center: uluru
+  });
+  var image = "./img/map-pin.png";
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    icon: image
+  });
+}
+
 function closeMenu() {
   navMain.classList.remove('main-nav--opened');
   navMain.classList.add('main-nav--closed');

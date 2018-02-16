@@ -62,16 +62,20 @@
   @include text-size(16px);
   text-transform: uppercase;
 
-  @include link;
+  @include link--active;
   color: $color-codgray;
 
-  //TODO add arrow image for hover state
   &::after {
     content: "";
     display: inline-block;
     width: 25px;
     margin-left: 11px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat center;
+  }
+
+  &:hover::after {
+    width: 28px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 }
 
@@ -96,7 +100,7 @@
   .program-card__description {
     border: 0;
     padding-bottom: 0;
-    margin-bottom: 57px;
+    margin-bottom: 56px;
 
     @include text-size(16px, 24px);
   }
@@ -111,7 +115,7 @@
 
   .program-card__header {
     margin-left: 0;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 }
 

@@ -3,8 +3,15 @@
   width: 193px;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 
-  @include link;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__icon {
@@ -24,24 +31,23 @@
   }
 
   .logo__icon {
-    width: 72px;
-    height: 64px;
+    width: 173px;
+    height: 60px;
   }
 
-  .logo__header {
-    width: 85px;
-    height: 17px;
+  .logo__header--sm {
+    display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .logo {
-    width: 202px;
+    width: auto;
   }
 
   .logo__icon {
-    width: 70px;
-    height: 59px;
+    width: 202px;
+    height: 61px;
   }
 
   .logo__header {

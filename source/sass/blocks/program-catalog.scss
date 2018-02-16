@@ -16,7 +16,7 @@
   .program-catalog {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .program-catalog__item {
@@ -25,6 +25,10 @@
 
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      margin-right: 80px;
     }
   }
 }
