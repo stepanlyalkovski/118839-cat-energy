@@ -14,7 +14,7 @@
 
   @include link--active;
 
-  &:hover {
+  &:hover .social__link-image {
     fill: $color-apple;
   }
 }
@@ -26,7 +26,8 @@
 .social__link-image {
   display: none;
   width: 23px;
-  height: 19;
+  height: 19px;
+  fill: $color-dove-gray;
 
   &--sm {
     display: inline-block;
