@@ -14,6 +14,9 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require('posthtml-include');
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -78,14 +81,32 @@ gulp.task('js', function() {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(gulp.dest("build"))
-  .pipe(server.stream());
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"))
+    .pipe(server.stream());
+});
+
+gulp.task("sprite", function () {
+  return gulp.src(["source/img/icon-*.svg", "source/img/logo-htmlacademy.svg"])
+    .pipe(
+      imagemin([
+        imagemin.svgo()
+      ])
+    )
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("build", function (done) {
   runSequence(
   "clean",
   ["fonts","images", "style", "js"],
+  "sprite",
   "html",
   done
   );
