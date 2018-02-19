@@ -26,6 +26,10 @@
     background-image: url("../img/icon-close.svg");
     background-size: 17px;
   }
+
+  &--nojs {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -3,6 +3,7 @@ var navToggle = document.querySelector('.header__toggle');
 var toogleOnClass = "header__toggle--on";
 
 navMain.classList.remove('main-nav--nojs');
+navToggle.classList.remove('header__toggle--nojs');
 
 navToggle.addEventListener('click', function() {
   if (navToggle.classList.contains(toogleOnClass)) {
